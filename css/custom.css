@@ -12,7 +12,7 @@
 /*-------------------------------------------------------------------------------------------------*/
 /*顶部栏*/
 #page-header.nav-fixed #nav{
-	background: rgba(246, 239, 246, 0.61) !important;
+	background: rgba(255, 251, 255, 0.61) !important;
 	backdrop-filter: blur(8px) !important;
 }
 [data-theme=dark]
@@ -22,7 +22,7 @@
 }
 
 #nav .show{
-	background: rgba(246, 239, 246, 0.61) !important;
+	background: rgba(255, 251, 255, 0.61) !important;
 	backdrop-filter: blur(8px) !important;
 }
 [data-theme=dark]
@@ -33,7 +33,7 @@
 
 /*手机模式侧边栏*/
 #sidebar #sidebar-menus.open{
-	background:rgba(246, 239, 246, 0.75) !important;
+	background:rgba(255, 251, 255, 0.75) !important;
 	backdrop-filter: blur(3px);
 	border-radius: 6px 0 0 6px;
 }
@@ -225,3 +225,324 @@ img {
 /*artitalk说说暗黑模式背景色和字体色 end*/
 
 /*-------------------------------------------------------------------------------------------------*/
+/* Butterfly 添加顶部加载进度条 */
+.pace {
+    pointer-events: none;
+    user-select: none;
+    z-index: 2;
+    position: fixed;
+    margin: auto;
+    top: 4px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    border-radius: 8px;
+    width: 6rem;
+    background: #eaecf2;
+    overflow: hidden;
+  }
+  
+  .pace-inactive .pace-progress {
+    opacity: 0;
+    transition: 0.3s ease-in;
+  }
+  
+  .pace.pace-inactive {
+    opacity: 0;
+    transition: 0.3s;
+    top: -8px;
+  }
+  
+  .pace .pace-progress {
+    box-sizing: border-box;
+    transform: translate3d(0, 0, 0);
+    position: fixed;
+    z-index: 2;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    background: #49b1f5;
+    background: linear-gradient(
+      to right,
+      rgb(18, 194, 233),
+      rgb(196, 113, 237),
+      rgb(246, 79, 89)
+    );
+    animation: gradient 2s ease infinite;
+    background-size: 200%;
+  }
+
+/*-------------------------------------------------------------------------------------------------*/
+/* 自定义字体样式 */
+/*引入字体*/
+@font-face {
+    font-family: iconfont;
+    src: url(./fonts/iconfont.b322fa.eot);
+    src: url(./fonts/iconfont.b322fa.eot#iefix) format("embedded-opentype"), 
+	  url(./fonts/iconfont.8c627f.woff) format("woff"), 
+	  url(./fonts/iconfont.16acc2.ttf) format("truetype"), 
+	  url(./fonts/default-skin.b257fa.svg#iconfont) format("svg"), 
+	  url(./fonts/tooltip.4004ff.svg#iconfont) format("svg"), 
+	  url(./fonts/iconfont.45d7ee.svg#iconfont) format("svg");
+}
+
+/*设置全局字体*/
+body {
+    font-family: lucida grande, lucida sans unicode, lucida, helvetica, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif, Helvetica Neue, STHeiTi, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 14px;
+    min-height: 100%;
+    margin: 0;
+}
+/*正文字体*/
+#article-container p {
+    font-family: lucida grande, lucida sans unicode, lucida, helvetica, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif, Helvetica Neue, STHeiTi, Arial, sans-serif; 
+    /*Menlo, Monaco, Andale Mono, lucida console, Courier New, monospace;*/
+    padding: 1px 3px;
+    margin: 0 3px 1.75em;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+/*各级标题设置不同样式*/
+#article-container h1 {
+    font-size: 20px;
+    font-size: 1.35rem;
+    line-height: 1.25;
+    margin-top: 30px;
+    margin-top: 2em;
+    margin-bottom: 1em
+}
+
+#article-container h2 {
+    font-size: 17px;
+    font-size: 1.2375rem;
+    line-height: 1.2173913043;
+    margin-top: 20px;
+    font-weight: 300;
+    padding-bottom: 5px;
+    margin-top: 2.4347826087em;
+    margin-bottom: 1.1173913043em;
+    border-bottom: 1px solid #aaa;/*文字底边横线*/
+}
+
+#article-container h3 {
+    font-size: 14px;
+    font-size: 1.1875rem;
+    margin-top: 20px;
+    font-weight: 300;
+    padding-bottom: 5px;
+    line-height: 1.1052631579; 
+    margin-top: 2.9473684211em;
+    margin-bottom: 1.1736842105em;
+    border-bottom: 1px solid #ddd; /*文字底边横线浅色*/
+    font-style: italic; /*设置第三级标题斜体*/
+}
+
+#article-container h4,
+#article-container h5,
+#article-container h6 {
+    font-size: 12px;
+    font-size: 1rem;
+    margin-top: 20px;
+    font-weight: 300;
+    padding-bottom: 5px;
+    line-height: 1.3125;
+    margin-top: 3.5em;
+    margin-bottom: 1.75em;
+}
+
+#article-container h4 {
+    letter-spacing: .140625em;
+    text-transform: uppercase;
+}
+
+.article-container h6 {
+    font-style: italic;
+}
+
+#article-container h1,
+#article-container h2,
+#article-container h3,
+#article-container h4,
+#article-container h5,
+#article-container h6 {
+    font-weight: 900  /*字体粗细*/
+}
+
+/*文章标题字体*/
+.post-title {
+    font-family: STHeiTi;
+}
+
+/*文章版权信息字体*/
+.author-info__name {
+    font-family: Roboto, serif;
+}
+
+.sticky_layout {  /*侧边卡字体*/
+    font-family: lucida grande, lucida sans unicode, lucida, helvetica, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif, Helvetica Neue, STHeiTi, Arial;
+}
+
+/*页脚字体*/
+#footer {
+    font-size: 12px;
+    font-family: lucida grande, lucida sans unicode, lucida, Arial, sans-serif;
+}
+
+/*代码 字体*/
+#article-container pre {
+    padding: 1px 3px;
+    margin: 0 3px;
+    font-family: Roboto, serif, Menlo, Monaco,"Andale Mono","lucida console","Courier New", monospace !important;
+    font-size: 14px;
+}
+
+/* 文章版权链接去掉下划线 */
+#post .post-copyright .post-copyright-info a {
+    text-decoration: none;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*代码框 字体设置*/
+#article-container pre {
+	padding: 1px 3px;
+	margin: 0 3px;
+	font-family: 'Fira Code', monospace !important;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/* 文章标题向上移动50px */
+#post-info {
+    transform: translateY(-50px);
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*波浪特效*/
+.main-hero-waves-area {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    bottom: -7.5px /*特效显示位置调整，正/负值：以中心点 上移/下移，一般改数值即可*/
+}
+
+.waves-area .waves-svg {
+    width: 100%;
+    height: 5rem
+}
+
+.waves-area .parallax>use {
+    -webkit-animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite
+}
+
+.waves-area .parallax>use:first-child {
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+    -webkit-animation-duration: 7s;
+    animation-duration: 7s;
+    fill: #ffffffb3
+}
+
+.waves-area .parallax>use:nth-child(2) {
+    -webkit-animation-delay: -3s;
+    animation-delay: -3s;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    fill: #ffffff80
+}
+
+.waves-area .parallax>use:nth-child(3) {
+    -webkit-animation-delay: -4s;
+    animation-delay: -4s;
+    -webkit-animation-duration: 13s;
+    animation-duration: 13s;
+    fill: #ffffff4d
+}
+
+.waves-area .parallax>use:nth-child(4) {
+    -webkit-animation-delay: -5s;
+    animation-delay: -5s;
+    -webkit-animation-duration: 20s;
+    animation-duration: 20s;
+    fill: #f9fafb
+}
+
+@-webkit-keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0)
+    }
+
+    to {
+        transform: translate3d(85px, 0, 0)
+    }
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0)
+    }
+
+    to {
+        transform: translate3d(85px, 0, 0)
+    }
+}
+
+/* 黑暗模式适配 */
+[data-theme=dark]
+.waves-area .parallax>use:first-child {
+    fill: #0f172ab3
+}
+[data-theme=dark]
+.waves-area .parallax>use:nth-child(2) {
+    fill: #0f172a80
+}
+[data-theme=dark]
+.waves-area .parallax>use:nth-child(3) {
+    fill: #0f172a4d
+}
+[data-theme=dark]
+.waves-area .parallax>use:nth-child(4) {
+    fill: #070b14
+}
+
+/****修改波浪特效fill属性处颜色值（#后六位，7、8位透明度不用改），rgba(246, 239, 246) 与 #F6EFF6 效果是一样的*****/
+.waves-area .parallax>use:first-child {
+    -webkit-animation-delay: -2s;
+    animation-delay: -2s;
+    -webkit-animation-duration: 7s;
+    animation-duration: 7s;
+    fill: #ffffffb3
+}
+
+.waves-area .parallax>use:nth-child(2) {
+    -webkit-animation-delay: -3s;
+    animation-delay: -3s;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    fill: #ffffff80
+}
+
+.waves-area .parallax>use:nth-child(3) {
+    -webkit-animation-delay: -4s;
+    animation-delay: -4s;
+    -webkit-animation-duration: 13s;
+    animation-duration: 13s;
+    fill: #ffffff4d
+}
+
+.waves-area .parallax>use:nth-child(4) {
+    -webkit-animation-delay: -5s;
+    animation-delay: -5s;
+    -webkit-animation-duration: 20s;
+    animation-duration: 20s;
+    fill: #ffffff
+}
+
+
+/*-------------------------------------------------------------------------------------------------*/
+/* 个人信息卡文章样式 */
