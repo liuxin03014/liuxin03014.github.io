@@ -1,0 +1,227 @@
+/*引入图标大小固定为主题自带参数*/
+.iconfont {
+	font-size: 100% !important;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*效果看本站文章侧边目录*/
+.toc-link.active {
+    background: #FCA4D4
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*顶部栏*/
+#page-header.nav-fixed #nav{
+	background: rgba(246, 239, 246, 0.61) !important;
+	backdrop-filter: blur(8px) !important;
+}
+[data-theme=dark]
+#page-header.nav-fixed #nav{
+	background: rgba(79, 76, 79, 0.35) !important;
+	backdrop-filter: blur(8px) !important;
+}
+
+#nav .show{
+	background: rgba(246, 239, 246, 0.61) !important;
+	backdrop-filter: blur(8px) !important;
+}
+[data-theme=dark]
+#nav .show{
+	background: rgba(79, 76, 79, 0.35) !important;
+	backdrop-filter: blur(8px) !important;
+}
+
+/*手机模式侧边栏*/
+#sidebar #sidebar-menus.open{
+	background:rgba(246, 239, 246, 0.75) !important;
+	backdrop-filter: blur(3px);
+	border-radius: 6px 0 0 6px;
+}
+[data-theme=dark]
+#sidebar #sidebar-menus.open{
+	background:rgba(252, 224, 252, 0.11) !important;
+	backdrop-filter: blur(3px);
+	border-radius: 6px 0 0 6px;
+}
+/*侧边控制按钮*/
+#rightside > #rightside-config-show > #rightside_config,
+#rightside > #rightside-config-show > #to_comment,
+#rightside > #rightside-config-show > #go-up, 
+#rightside > #rightside-config-show > #go-down,
+#rightside > #rightside-config-hide > #readmode,
+#rightside > #rightside-config-hide > #translateLink,
+#rightside > #rightside-config-hide > #hide-aside-btn {
+	background: opacity(0.3);
+	backdrop-filter: blur(3px);
+}
+[data-theme=dark]
+#rightside > #rightside-config-show > #rightside_config,
+#rightside > #rightside-config-show > #to_comment,
+#rightside > #rightside-config-show > #go-up,
+#rightside > #rightside-config-show > #go-down,
+#rightside > #rightside-config-hide > #readmode,
+#rightside > #rightside-config-hide > #translateLink,
+#rightside > #rightside-config-hide > #hide-aside-btn {
+	background: opacity(0.3);
+	backdrop-filter: blur(3px);
+}
+/*搜索*/
+#local-search .search-dialog,
+#local-search .search-dialog .local-search-box input{
+	background:rgba(255, 255, 255, 0.75) !important;
+	backdrop-filter: blur(3px);
+	border-radius: 6px 6px;
+}
+[data-theme=dark]
+#local-search .search-dialog,
+#local-search .search-dialog .local-search-box input{
+	background:rgba(252, 224, 252, 0.2) !important;
+	backdrop-filter: blur(3px);
+	border-radius: 6px 6px;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/* 滚动条 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: rgba(73, 177, 245, 0.2);
+    border-radius: 2em;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #49b1f5;
+    background-image: -webkit-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.4) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0.4) 75%,
+      transparent 75%,
+      transparent
+    );
+    border-radius: 2em;
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+  
+  ::-moz-selection {
+    color: #fff;
+    background-color: #49b1f5;
+  }
+
+/*-------------------------------------------------------------------------------------------------*/
+/* 页脚footer */
+/* 渐变色滚动动画 */
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+#footer {
+    background: linear-gradient(-45deg, #ee7752, #ce3e75, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 10s ease infinite;
+    -moz-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#footer:before {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/* 鼠标样式 */
+body {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),
+        default;
+}
+a,
+img {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+        default;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/* 阅读模式字体 */
+.read-mode{
+    /* 字体大小 */
+    font-size:17px;
+    /* 可以在这里引入自定义字体，具体方法请自行百度css引入字体 */
+}
+.read-mode #web_bg{
+    /* 背景颜色 */
+    background:#fdf6e3;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*artitalk说说暗黑模式背景色和字体色*/
+/*配置项https://artitalk.js.org/settings.html*/
+[data-theme="dark"] #artitalk_main .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel {
+    background: #2c2c2c;
+}
+[data-theme="dark"] #artitalk_main .cbp_tmtimeline>li .cbp_tmlabel {
+    background: #2c2c2c;
+}
+[data-theme="dark"] #artitalk_main .cbp_tmtimeline>li .cbp_tmlabel {
+    color: rgba(255, 255, 255, 0.9);
+}
+#operare_artitalk .at_button, #artitalk_main .at_button {
+    background-color: var(--btn-bg) !important;
+    color: var(--btn-color) !important;
+    border-radius: 0.5em !important;
+}
+#operare_artitalk .at_button, #artitalk_main .at_button:hover {
+    background-color: var(--btn-hover-color) !important;
+}
+/*artitalk说说暗黑模式背景色和字体色 end*/
+
+/*-------------------------------------------------------------------------------------------------*/
