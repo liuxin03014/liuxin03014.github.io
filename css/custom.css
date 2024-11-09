@@ -15,23 +15,7 @@
     transform: translateX(100%) skewX(-60deg);
   }
   
-/* 主题背景色 */
-  #footer {
-    -webkit-backdrop-filter: saturate(100%) blur(5px);
-    backdrop-filter: saturate(100%) blur(5px);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    color: #000
-  }
-  
-  #footer,#footer:before {
-    background: hsla(0,0%,100%,.15)
-  }
-  
-  #footer #footer-wrap,#footer #footer-wrap a {
-    color: #333;
-  }
-  #footer #footer-wrap{
+  #footer #footer-wrap {
     background: transparent!important;
   }
   
@@ -39,3 +23,19 @@
     background: linear-gradient(90deg,rgba(247,149,51,.1),rgba(243,112,85,.1) 15%,rgba(239,78,123,.1) 30%,rgba(161,102,171,.1) 44%,rgba(80,115,184,.1) 58%,rgba(16,152,173,.1) 72%,rgba(7,179,155,.1) 86%,rgba(109,186,130,.1))
   }
 
+  @font-face {
+    font-family: 'CascadiaCodePL';
+    font-display: swap;
+    src: url('/butterflyChange/fonts/CascadiaCodePL.ttf') format("truetype");
+  }
+
+  @font-face {
+    font-family: 'webfont';
+    font-display: swap;
+    src: url('.eot');  
+    src: url('.eot') format('embedded-opentype'),  /* IE6-IE8 */
+         url('.woff2') format('woff2'),
+         url('.woff') format('woff'),  /*chrome、firefox */
+         url('.ttf') format('truetype'),  /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+         url('.svg') format('svg');  
+ }
