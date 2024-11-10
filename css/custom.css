@@ -14,3 +14,13 @@
   #recent-posts > .recent-post-item:not(a):hover::before {
     transform: translateX(100%) skewX(-60deg);
   }
+
+
+/* 小动物夜间显示优化 */
+[data-theme='dark'] #page-header.nav-fixed #nav {
+  background: var(--anzhiyu-black)!important;
+}
+
+[data-theme='dark'] #page-header #nav {
+  background: 0 !important;
+}
