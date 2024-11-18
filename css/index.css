@@ -3323,7 +3323,7 @@ figure.highlight pre .javascript .function {
 }
 #article-container pre,
 #article-container code {
-  font-size: 15px;
+  font-size: var(--global-font-size);
   font-family: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif !important;
 }
 #article-container code {
@@ -3351,7 +3351,7 @@ figure.highlight pre .javascript .function {
 #article-container figure.highlight figcaption,
 #article-container figure.highlight .caption {
   padding: 6px 0 2px 14px;
-  font-size: 15px;
+  font-size: var(--global-font-size);
   line-height: 1em;
 }
 #article-container figure.highlight figcaption a,
@@ -3383,7 +3383,7 @@ figure.highlight pre .javascript .function {
   height: 2.15em;
   background: var(--hltools-bg);
   color: var(--hltools-color);
-  font-size: 15px;
+  font-size: var(--global-font-size);
 }
 #article-container .highlight-tools.closed ~ * {
   display: none;
@@ -3516,7 +3516,7 @@ figure.highlight pre .javascript .function {
   font-size: 20px;
   background: var(--hlexpand-bg);
   text-align: center;
-  font-size: 15px;
+  font-size: var(--global-font-size);
   cursor: pointer;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);

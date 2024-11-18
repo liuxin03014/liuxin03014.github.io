@@ -61,27 +61,39 @@
 }
 
 /*******************************************************/
-/* 帧率检测 */
-#fps {
-  position: fixed;
-  /* 指定位置 */
-  left: 10px;
-  bottom: 88px;
-  z-index: 1919810;
-}
-[data-theme="light"] #fps {
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
-[data-theme="dark"] #fps {
-  background-color: rgba(0, 0, 0, 0.72);
-  backdrop-filter: var(--backdrop-filter);
-  padding: 4px;
-  border-radius: 4px;
-}
 
 /*******************************************************/
 
+/*******************************************************/
+.comment-head {
+  position: relative;  /* 使 .comment-head 成为定位的参考 */
+}
+
+.comment-randomInfo {
+  position: absolute;
+  right: 0;  /* 将 .comment-randomInfo 放置在 .comment-head 的最右边 */
+  top: 50%;  /* 可以用 top 50% 来使其垂直居中，调整为合适的垂直位置 */
+  transform: translateY(-50%);  /* 垂直居中 .comment-randomInfo（可选） */
+  z-index: 999;  /* 确保在其他元素之上 */
+}
+
+.comment-switch {
+  position: absolute;
+  left: 50%;  /* 将 .comment-switch 水平居中 */
+  top: 50%;  /* 将 .comment-switch 垂直居中 */
+  transform: translate(-50%, -50%);  /* 水平垂直居中 */
+  z-index: 999;  /* 确保 .comment-switch 在 .comment-head 之上 */
+}
+
+/*******************************************************/
+/* 鼠标样式 */
+body {
+  cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),
+      default;
+}
+a,
+img {
+  cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+      default;
+}
 /*******************************************************/
