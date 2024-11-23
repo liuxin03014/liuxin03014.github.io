@@ -275,11 +275,11 @@
   }
 }
 /*******************************************************/
-.no-lightbox {
+.tags-group-icon .no-lightbox {
   filter: brightness(0) invert(1) !important; /* 默认显示白色 */
 }
 
-[data-theme="dark"] .no-lightbox {
+[data-theme="dark"] .tags-group-icon .no-lightbox {
   filter: invert(1) brightness(100%) !important; /* 黑夜模式下仍然显示白色 */
 }
 
