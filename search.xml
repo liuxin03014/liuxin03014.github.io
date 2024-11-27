@@ -4,208 +4,29 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/posts/4a17b156.html"/>
-      <url>/posts/4a17b156.html</url>
+      <title>无服务器零成本部署个人博客-Hexo（一）</title>
+      <link href="/posts/8443637f.html"/>
+      <url>/posts/8443637f.html</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test2</title>
-      <link href="/posts/13bb8d58.html"/>
-      <url>/posts/13bb8d58.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="一、Hexo-简介"><a href="#一、Hexo-简介" class="headerlink" title="一、Hexo 简介"></a>一、Hexo 简介</h2><p>Hexo 是一个快速、简单且功能强大的静态博客框架，基于 Node.js 构建，适合用于搭建个人博客。</p><h2 id="二、安装前准备"><a href="#二、安装前准备" class="headerlink" title="二、安装前准备"></a>二、安装前准备</h2><ul><li><strong>操作系统要求</strong>  </li></ul><p>​Hexo 支持 macOS、Windows 和 Linux 系统。</p><ul><li><strong>必备环境</strong>  </li></ul><p>​<a href="https://nodejs.org/">Node.js</a>：需要安装 Node.js (建议使用 LTS 版本)，其自带 npm 包管理工具。</p><p>​<a href="https://git-scm.com/downloads/win">Git</a>：用于版本控制和托管静态文件。</p><p>​<a href="https://github.com/">Github</a>：需要注册一个Github账号。</p><ul><li><strong>非必要</strong></li></ul><p>域名：最好是有一个自己的域名。当然，如果你不需要域名也可以使用GitHub的自带域名或者Cloudflare、Vercel、Netlify的域名。</p><p><a href="https://dash.cloudflare.com/">Cloudflare</a>：你需要注册一个Cloudflare帐号，这样你就可以将博客部署在CF的CDN里加速。（大陆IP访问速度一般）</p><p><a href="https://vercel.com">Vercel</a>：你需要注册一个Vercel帐号，这样你就可以将博客部署在Vercel的CDN里加速。（大陆IP访问阻断）</p><p><a href="https://app.netlify.com/">Netlify</a>：你需要注册一个Netlify帐号，这样你就可以将博客部署在Netlify的CDN里加速。（大陆IP访问速度还行）</p><p><a href="https://code.visualstudio.com/">VSCode</a>：这是一款轻量型的代码编辑器。（根据自己的使用习惯，也可以使用其他编辑器）</p><h2 id="三、安装步骤"><a href="#三、安装步骤" class="headerlink" title="三、安装步骤"></a>三、安装步骤</h2><h3 id="1-安装-Node-js-和-Git"><a href="#1-安装-Node-js-和-Git" class="headerlink" title="1. 安装 Node.js 和 Git"></a>1. 安装 Node.js 和 Git</h3><p><strong>安装 Node.js</strong>  </p><p>前往 <a href="https://nodejs.org/">Node.js 官网</a>，下载并安装对应操作系统的 LTS 版本。（安装路径不要有中文）</p><p>打开终端验证安装是否成功：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure><p>看到有版本信息，说明安装成功了。   </p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/1732611614753.png" alt=""></p><p><strong>安装 Git</strong></p><p>前往 <a href="https://git-scm.com/">Git 官网</a>，下载并安装 Git。（无脑下一步即可）</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/1732611746114.png" alt=""></p><h3 id="2-连接GitHub"><a href="#2-连接GitHub" class="headerlink" title="2.连接GitHub"></a>2.连接GitHub</h3><p>打开Git终端，输入命令：</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126171322.png" alt=""></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config -l  //查看所有配置</span><br><span class="line">git config --system --list //查看系统配置</span><br><span class="line">git config --global --list //查看用户（全局）配置</span><br></pre></td></tr></table></figure><p><strong>配置用户名和邮箱</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure><p>查看配置，看到变成自己GitHub的用户名和邮箱就说明配置好了。</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126172121.png" alt=""></p><p><strong>配置公钥连接Github</strong></p><p>执行以下命令生成ssh公钥，用于你的计算机连接Github。一路回车下去就可以了。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure><p>然后，打开C盘下用户文件夹下的 <code>.ssh</code> 的文件夹，会看到两个文件。</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/1732614937793.png" alt=""></p><p>用记事本打开上述图片中的公钥 <code>id_rsa.pub</code> ，复制里面的内容，然后开始在github中配置ssh密钥。</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126175851.png" alt=""></p><p><strong>将 SSH KEY 配置到 GitHub</strong><br>进入GitHub，点击右上角头像 选择<code>settings</code>，进入设置页后选择 <code>SSH and GPG keys</code>，名字随意，公钥填到<code>Key</code>那一栏。</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126180224.png" alt=""></p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126180603.png" alt=""></p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126180610.png" alt=""></p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126180828.png" alt=""></p><p><strong>测试连接，输入以下命令</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>第一次连接会提示<code>Are you sure you want to continue connecting (yes/no/[fingerprint])?</code>，输入<code>yes</code>即可。看到 <code>access</code> 说明链接成功了。</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/1732616051958.png" alt=""></p><h3 id="3-创建博客仓库"><a href="#3-创建博客仓库" class="headerlink" title="3.创建博客仓库"></a>3.创建博客仓库</h3><p>点击右上角的 <code>+</code> 按钮，选择  <code>New repository</code> ，创建一个<code>&lt;用户名&gt;.github.io</code>的仓库。</p><p>仓库名字的格式必须为：<code>&lt;用户名&gt;.github.io</code> (注意：前缀必须为用户名，此为预览博客需要，后期可修改仓库名)</p><p>可见性必须选择 <code>Public</code> 方便第一次部署检查问题，点击 <code>Creat repository</code> 进行创建即可</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126182046.png" alt=""></p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126182648.png" alt=""></p><h3 id="4-安装-Hexo"><a href="#4-安装-Hexo" class="headerlink" title="4. 安装 Hexo"></a>4. 安装 Hexo</h3><p>在Git终端中运行以下命令，使用 npm 安装 Hexo：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>验证安装是否成功：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure><p>看到版本信息就安装成功了</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126183100.png" alt=""></p><h3 id="5-初始化博客项目"><a href="#5-初始化博客项目" class="headerlink" title="5. 初始化博客项目"></a>5. 初始化博客项目</h3><p>选择一个文件夹作为你的博客根目录，比如 <code>my-blog</code>，进入该文件夹并初始化 Hexo 项目：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init my-blog</span><br><span class="line">cd my-blog</span><br><span class="line">npm install 或 npm i</span><br></pre></td></tr></table></figure><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/1732617421559.png" alt=""></p><h3 id="4-启动本地服务器"><a href="#4-启动本地服务器" class="headerlink" title="4. 启动本地服务器"></a>4. 启动本地服务器</h3><p>初始化完成后，运行以下命令启动本地 Hexo 服务：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo server 或 hexo cl &amp;&amp; hexo s</span><br></pre></td></tr></table></figure><p>默认情况下，Hexo 会在 <code>http://localhost:4000</code> 提供预览，打开浏览器访问即可。</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126185116.png" alt=""></p><h2 id="四、常用命令"><a href="#四、常用命令" class="headerlink" title="四、常用命令"></a>四、常用命令</h2><div class="table-container"><table><thead><tr><th>命令</th><th>作用</th></tr></thead><tbody><tr><td><code>hexo generate</code> 或 <code>hexo g</code></td><td>生成静态文件</td></tr><tr><td><code>hexo server</code> 或 <code>hexo s</code></td><td>启动本地服务器</td></tr><tr><td><code>hexo clean</code> 或 <code>hexo cl</code></td><td>清除缓存和生成的文件</td></tr><tr><td><code>hexo deploy</code> 或 <code>hexo d</code></td><td>部署博客到远程服务器</td></tr></tbody></table></div><h2 id="五、部署到-GitHub-Pages"><a href="#五、部署到-GitHub-Pages" class="headerlink" title="五、部署到 GitHub Pages"></a>五、部署到 GitHub Pages</h2><h3 id="1-安装部署工具"><a href="#1-安装部署工具" class="headerlink" title="1. 安装部署工具"></a>1. 安装部署工具</h3><p>运行以下命令安装 Hexo 的部署工具：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><h3 id="2-配置-config-yml-文件"><a href="#2-配置-config-yml-文件" class="headerlink" title="2. 配置 _config.yml 文件"></a>2. 配置 <code>_config.yml</code> 文件</h3><p>在博客根目录的 <code>_config.yml</code> 文件中，找到 <code>deploy</code> 部分，修改为：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/你的用户名/你的仓库名.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126185738.png" alt=""></p><h3 id="4-部署博客"><a href="#4-部署博客" class="headerlink" title="4. 部署博客"></a>4. 部署博客</h3><p>运行以下命令生成并部署博客：</p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo <span class="keyword">generate</span> &amp;&amp; hexo deploy</span><br><span class="line">或</span><br><span class="line">hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure><p>完成后，访问 <code>https://你的用户名.github.io/</code> 即可看到你的博客。</p><h2 id="六、补充"><a href="#六、补充" class="headerlink" title="六、补充"></a>六、补充</h2><p>一切都完成之后，你可以将博客仓库设置为私人，这样会更安全，不过 <code>https://你的用户名.github.io/</code> 这个域名就不能在访问了，必须要有自己的域名才能访问。</p><p>首先，进入博客仓库，点击 <code>Settings</code> </p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126232356.png" alt=""></p><p>然后，拉到最下边找到 <code>Danger Zone</code> ，点击 <code>Change visibility</code> - <code>Change to private</code> </p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126233521.png" alt=""></p><p>最后，需要确认三次</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126234319.png" alt=""></p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126234332.png" alt=""></p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126234336.png" alt=""></p><p>看到博客仓库旁有一把小锁，就成功该为私人仓库了</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.smartcis.cn/gh/liuxin03014/blog-imgs//img/posts/2024-11/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241126235121.png" alt=""></p><h2 id="七、结语"><a href="#七、结语" class="headerlink" title="七、结语"></a>七、结语</h2><p>通过以上步骤，您已经成功搭建了一个基于 Hexo 的静态博客，并部署到 GitHub Pages，让您的博客随时在线！Hexo 简单易用，适合初学者快速上手，同时支持高度自定义，满足进阶需求。搭配 GitHub Pages 和其他 CDN 服务（如 Cloudflare Pages），可以实现高效、零成本的个人博客搭建。</p><p>如果在搭建过程中遇到问题，不妨多查阅官方文档或相关教程，享受探索的过程，也欢迎在评论区留言！希望您的博客旅程愉快！ 😊</p>]]></content>
       
       
       <categories>
           
-          <category> test 测试 测试1 </category>
+          <category> Hexo </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> test 测试 测试1 </tag>
+            <tag> Hexo </tag>
             
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test1</title>
-      <link href="/posts/8ab2dce2.html"/>
-      <url>/posts/8ab2dce2.html</url>
-      
-        <content type="html"><![CDATA[<div class="video-container">[up主专用，视频内嵌代码贴在这]</div><style>.video-container {    position: relative;    width: 100%;    padding-top: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 * 100%) */}.video-container iframe {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;}</style>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>测试测试1</title>
-      <link href="/posts/b18bdd93.html"/>
-      <url>/posts/b18bdd93.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 测试 </category>
-          
-          <category> test </category>
-          
-          <category> 优秀文章 </category>
-          
-          <category> 博客总结 </category>
-          
-          <category> 博客搭建 </category>
-          
-          <category> 实用教程 </category>
-          
-          <category> 敲敲代码 </category>
-          
-          <category> 生活杂谈 </category>
-          
-      </categories>
-      
-      
-        <tags>
+            <tag> 教程 </tag>
             
-            <tag> 测试 </tag>
+            <tag> 博客 </tag>
             
-            <tag> test </tag>
-            
-            <tag> 优秀文章 </tag>
-            
-            <tag> 博客总结 </tag>
-            
-            <tag> 博客搭建 </tag>
-            
-            <tag> 实用教程 </tag>
-            
-            <tag> 敲敲代码 </tag>
-            
-            <tag> 生活杂谈 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>测试测试1</title>
-      <link href="/posts/b18bdd93.html"/>
-      <url>/posts/b18bdd93.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 测试 </category>
-          
-          <category> test </category>
-          
-          <category> 优秀文章 </category>
-          
-          <category> 博客总结 </category>
-          
-          <category> 博客搭建 </category>
-          
-          <category> 实用教程 </category>
-          
-          <category> 敲敲代码 </category>
-          
-          <category> 生活杂谈 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 测试 </tag>
-            
-            <tag> test </tag>
-            
-            <tag> 优秀文章 </tag>
-            
-            <tag> 博客总结 </tag>
-            
-            <tag> 博客搭建 </tag>
-            
-            <tag> 实用教程 </tag>
-            
-            <tag> 敲敲代码 </tag>
-            
-            <tag> 生活杂谈 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>测试测试</title>
-      <link href="/posts/8f5ec72c.html"/>
-      <url>/posts/8f5ec72c.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> 测试 </category>
-          
-          <category> test </category>
-          
-          <category> 优秀文章 </category>
-          
-          <category> 博客总结 </category>
-          
-          <category> 博客搭建 </category>
-          
-          <category> 实用教程 </category>
-          
-          <category> 敲敲代码 </category>
-          
-          <category> 生活杂谈 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 测试 </tag>
-            
-            <tag> test </tag>
-            
-            <tag> 优秀文章 </tag>
-            
-            <tag> 博客总结 </tag>
-            
-            <tag> 博客搭建 </tag>
-            
-            <tag> 实用教程 </tag>
-            
-            <tag> 敲敲代码 </tag>
-            
-            <tag> 生活杂谈 </tag>
+            <tag> blog </tag>
             
         </tags>
       

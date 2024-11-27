@@ -1,21 +1,3 @@
-/* 首页文章卡片擦亮效果 */
-#recent-posts > .recent-post-item:not(a)::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200%;
-    background: linear-gradient(to right, transparent, white, transparent);
-    transform: translateX(-200%);
-    transition: transform 0.5s linear;
-    z-index: 1;
-  }
-  #recent-posts > .recent-post-item:not(a):hover::before {
-    transform: translateX(100%) skewX(-60deg);
-  }
-
-
 /* 小动物夜间显示优化 */
 [data-theme='dark'] #page-header.nav-fixed #nav {
   background: var(--anzhiyu-black)!important;
@@ -61,228 +43,15 @@
 }
 
 /*******************************************************/
-/* 自定义twikoo评论输入框高度 */
-.tk-input .el-textarea__inner {
-  height: 130px !important;
-}
-/* 输入评论时自动隐藏输入框背景图片 */
-.tk-input .el-textarea__inner:focus {
-  background-image: none !important;
-}
-/* 调整楼中楼样式 ，整体左移，贴合气泡化效果 */
-.tk-replies {
-  left: -70px;
-  width: calc(100% + 70px);
-}
-/* 头像宽度调整 rem单位与全局字体大小挂钩，需配合自己情况调整大小以保证头像显示完整*/
-.tk-replies .tk-avatar {
-  width: 2.5rem !important;
-  height: 2.5rem !important;
-}
-.tk-replies .tk-avatar img {
-  width: 2.5rem !important;
-  height: 2.5rem !important;
-}
-/* 回复框左移，避免窄屏时出框 */
-.tk-comments-container .tk-submit {
-  position: relative;
-  left: -70px;
-}
-/* 评论块气泡化修改 */
-.tk-content {
-  background: #00a6ff; /*默认模式访客气泡配色*/
-  padding: 10px;
-  color: #fff; /*默认模式访客气泡字体配色*/
-  border-radius: 10px;
-  font-size: 16px !important;
-  width: fit-content;
-  max-width: 100%;
-  position: relative !important;
-  overflow: visible !important;
-  max-height: none !important;
-}
-/* 修复图片出框 */
-.tk-content img {
-  max-width: 100% !important;
-}
-/* 修复过长文本出框 */
-.tk-content pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-.tk-content a {
-  color: #eeecaa; /*默认模式超链接配色*/
-}
-.tk-content::before {
-  content: '';
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 20px;
-  left: -13px;
-  border-top: 2px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 15px solid #00a6ff; /*默认模式访客气泡小三角配色*/
-  border-left: 0px solid transparent;
-}
-.tk-master .tk-content {
-  background: #ff8080; /*默认模式博主气泡配色*/
-  color: #fff; /*默认模式博主气泡字体配色*/
-  width: fit-content;
-  max-width: 100%;
-}
-.tk-master .tk-content a {
-  color: #eeecaa;
-}
-.tk-master .tk-content::before {
-  content: '';
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 20px;
-  left: -13px;
-  border-top: 2px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 15px solid #ff8080; /*默认模式博主气泡小三角配色*/
-  border-left: 0px solid transparent;
-}
-.tk-row[data-v-d82ce9a0] {
-  max-width: 100%;
-  width: fit-content;
-}
-.tk-avatar {
-  border-radius: 50%;
-  margin-top: 10px;
-}
 
-/* 夜间模式配色，具体比照上方默认模式class */
-[data-theme="dark"] .tk-content {
-  background: #000;
-  color: #fff;
-}
-[data-theme="dark"] .tk-content a {
-  color: #dfa036;
-}
-[data-theme="dark"] .tk-content::before {
-  border-right: 15px solid #000;
-}
-[data-theme="dark"] .tk-master .tk-content {
-  background: #000;
-  color: #fff;
-}
-[data-theme="dark"] .tk-master .tk-content a {
-  color: #dfa036;
-}
-[data-theme="dark"] .tk-master .tk-content::before {
-  border-top: 2px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 15px solid #000;
-  border-left: 0px solid transparent;
-}
-/* 自适应内容 */
-@media screen and (min-width: 1024px) {
-  /* 设置宽度上限，避免挤压博主头像 */
-  .tk-content {
-    max-width: 75%;
-    width: fit-content;
-  }
-  .tk-master .tk-content {
-    width: 75%;
-  }
-  .tk-master .tk-content::before {
-    left: 100%;
-    border-left: 15px solid #ff8080;
-    border-right: 0px solid transparent;
-  }
-  .tk-master .tk-avatar {
-    position: relative;
-    left: calc(75% + 70px);
-  }
-  .tk-master .tk-row[data-v-d82ce9a0] {
-    position: relative;
-    top: 0px;
-    left: calc(75% - 230px);
-  }
-  [data-theme="dark"] .tk-master .tk-content::before {
-    border-left: 15px solid #000;
-    border-right: 0px solid transparent;
-  }
-}
-/* 设备名称常态隐藏，悬停评论时显示 */
-.tk-extras {
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-}
-.tk-content:hover + .tk-extras {
-  -webkit-animation: tk-extras-fadeIn 0.5s linear;
-  -moz-animation: tk-extras-fadeIn 0.5s linear;
-  -o-animation: tk-extras-fadeIn 0.5s linear;
-  -ms-animation: tk-extras-fadeIn 0.5s linear;
-  animation: tk-extras-fadeIn 0.5s linear;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-@-moz-keyframes tk-extras-fadeIn {
-  from {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-  }
-  to {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-}
-@-webkit-keyframes tk-extras-fadeIn {
-  from {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-  }
-  to {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-}
-@-o-keyframes tk-extras-fadeIn {
-  from {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-  }
-  to {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-}
-@keyframes tk-extras-fadeIn {
-  from {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-  }
-  to {
-    opacity: 1;
-    -ms-filter: none;
-    filter: none;
-  }
-}
 /*******************************************************/
-.tags-group-icon .no-lightbox {
+.tags-group-icon:not(.no-text-decoration) .no-lightbox {
   filter: brightness(0) invert(1) !important; /* 默认显示白色 */
 }
 
-[data-theme="dark"] .tags-group-icon .no-lightbox {
+[data-theme="dark"] .tags-group-icon:not(.no-text-decoration) .no-lightbox {
   filter: invert(1) brightness(100%) !important; /* 黑夜模式下仍然显示白色 */
 }
-
 /*******************************************************/
 .comment-head {
   position: relative;  /* 使 .comment-head 成为定位的参考 */
@@ -316,15 +85,132 @@ img {
       default;
 }
 /*******************************************************/
-#web_bg {
-  position: fixed;
-  transform: rotate(0deg);
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: -2;
+
+/*******************************************************/
+/* 隐藏点赞 */
+/* 引用链接隐藏外部提示 */
+.tk-action .tk-action-link:first-child,
+.tag-link-tips {
+    display: none!important;
 }
+
+/* 手机端搜索栏样式 */
+@media screen and (max-width: 768px), (max-height: 580px) {
+    .search-dialog {
+        top: 2rem!important;
+        left: 5%!important;
+        width: 90%!important;
+        height: auto!important;
+        border-radius: 10px!important;
+    }
+}
+
+
+/* 优化关于界面人生图片 */
+img.author-content-img.no-lightbox.entered.loaded {
+    filter: blur(0) brightness(.8);
+}
+
+/* 轮播下面导航栏分类优化 */
+#catalog-list,
+anzhiyu.barrageContent {
+    scrollbar-width: none;
+}
+
+/* 优化文章顶部分类和标签显示异常 */
+#post-firstinfo .meta-firstline span.post-meta-categories a.post-meta-categories {
+    background: rgb(107 107 107 / 50%)!important;
+}
+
+#post #post-info #post-firstinfo .meta-firstline .article-meta__tags {
+    color: #888!important;
+}
+
+/* 优化手机端文章页面边角露底色 */
+@media screen and (max-width: 768px) {
+    .post .layout#content-inner {
+        background: transparent;
+    }
+}
+
+/* 代码块的边框显示优化 */
+#article-container figure.highlight {
+    border: var(--style-border);
+}
+
+/* 手机端nav栏 */
+#sidebar #sidebar-menus {
+    padding-top: 10px!important;
+}
+
+/* 擦亮效果 */
+#recent-posts > .recent-post-item:not(a)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(to right, transparent, white, transparent);
+    transform: translateX(-200%);
+    transition: transform 0.5s linear;
+    z-index: 1;
+}
+
+#recent-posts > .recent-post-item:not(a):hover::before {
+    transform: translateX(100%) skewX(-60deg);
+}
+
+/* Twikoo*/
+/* 评论框背景图优化 */
+.twikoo .el-input__inner,
+.twikoo .el-textarea__inner {
+    transition: background-position-y 0.3s ease-in-out 0s !important;
+}
+
+.twikoo .el-input__inner:focus,
+.twikoo .el-textarea__inner:focus {
+    background-position-y: 350px;
+}
+
+.tk-input .el-textarea__inner {
+    -moz-background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain
+}
+
+/* 评论回复 */
+.tk-action-link {
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    border: var(--style-border);
+}
+
+.tk-action-link:hover {
+    background: var(--anzhiyu-theme);
+    color: #fff;
+}
+
+/* 评论后台优化 */
+#body-wrap.page .el-input__inner {
+    background: #ffffff0f;
+}
+
+[data-theme=dark] details > summary {
+    background: none!important;
+}
+/*******************************************************/
+/* 右下角图标居中 */
+.anzhiyufont.anzhiyu-icon-circle-half-stroke {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  height: 100%; /* 父容器高度 */
+}
+/*******************************************************/
+/* 文章页下隐藏时钟 */
+#body-wrap.post .card-widget.card-clock {
+    display: none!important;
+  }
+  
