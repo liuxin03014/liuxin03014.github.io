@@ -105,6 +105,10 @@ img {
     }
 }
 
+/* 首页文章的标签位置 */
+#recent-posts > .recent-post-item > .recent-post-info > .article-meta-wrap {
+    bottom: 15px!important;
+}
 
 /* 优化关于界面人生图片 */
 img.author-content-img.no-lightbox.entered.loaded {
@@ -209,7 +213,7 @@ anzhiyu.barrageContent {
   height: 100%; /* 父容器高度 */
 }
 /*******************************************************/
-/* 文章页下隐藏时钟 */
+/* 文章页隐藏时钟 */
 #body-wrap.post .card-widget.card-clock {
     display: none!important;
   }
