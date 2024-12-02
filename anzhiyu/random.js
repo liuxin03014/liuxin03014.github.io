@@ -1,6 +1,6 @@
 var posts=["posts/9accd4d9.html","posts/8443637f.html"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
-  };var friend_link_list=[{"name":"煙花巷陌","link":"https://blog.ilue.pp.ua/","avatar":"https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg","descr":"不思进取，顺其自然。","recommend":true},{"name":"安知鱼","link":"https://blog.anheyu.com/","avatar":"https://picsur.ilue.pp.ua/i/1ed788da-9790-4d70-a888-d2773adc4124.webp","descr":"生活明朗，万物可爱","recommend":true}];
+  };var friend_link_list=[{"name":"煙花巷陌","link":"https://blog.ilue.pp.ua/","avatar":"https://picsur.ilue.pp.ua/i/1ed788da-9790-4d70-a888-d2773adc4124.webp","descr":"不思进取，顺其自然。","recommend":true},{"name":"安知鱼","link":"https://blog.anheyu.com/","avatar":"https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg","descr":"生活明朗，万物可爱","recommend":true}];
     var refreshNum = 1;
     function friendChainRandomTransmission() {
       const randomIndex = Math.floor(Math.random() * friend_link_list.length);
