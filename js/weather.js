@@ -1,12 +1,1 @@
-(function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
-  window.SeniverseWeatherWidget('show', {
-    flavor: "slim",
-    location: "WX4FBXXFKE4F",
-    geolocation: true,
-    language: "zh-Hans",
-    unit: "c",
-    theme: "auto",
-    token: "d63c46c1-1bcd-4e5a-bbd4-c11e1eae44e9",
-    hover: "enabled",
-    container: "tp-weather-widget"
-  })
+!function(e,t,n,a,c,i,o,d){d=function(){i=t.createElement(n),o=t.getElementsByTagName(n)[0],i.src=c,i.charset="utf-8",i.async=1,o.parentNode.insertBefore(i,o)},e.SeniverseWeatherWidgetObject=a,e[a]||(e[a]=function(){(e[a].q=e[a].q||[]).push(arguments)}),e[a].l=+new Date,e.attachEvent?e.attachEvent("onload",d):e.addEventListener("load",d,!1)}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt(((new Date).getTime()/1e8).toString(),10)),window.SeniverseWeatherWidget("show",{flavor:"slim",location:"WX4FBXXFKE4F",geolocation:!0,language:"zh-Hans",unit:"c",theme:"auto",token:"d63c46c1-1bcd-4e5a-bbd4-c11e1eae44e9",hover:"enabled",container:"tp-weather-widget"});
