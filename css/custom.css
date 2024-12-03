@@ -503,10 +503,6 @@ anzhiyu.barrageContent {
   height: 100%; /* 父容器高度 */
 }
 /*******************************************************/
-/* 文章页隐藏时钟 */
-#body-wrap.post .card-widget.card-clock {
-    display: none!important;
-  }
 
 /*******************************************************/
 @font-face {
