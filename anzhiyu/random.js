@@ -1,4 +1,4 @@
-var posts=["posts/b54552e4.html","posts/a3f71340.html","posts/2358d47a.html","posts/8443637f.html","posts/a60ca4c1.html","posts/9accd4d9.html","posts/7e81ca61.html","posts/faa6fc84.html"];function toRandomPost(){
+var posts=["posts/b54552e4.html","posts/a3f71340.html","posts/2358d47a.html","posts/8443637f.html","posts/9accd4d9.html","posts/a60ca4c1.html","posts/7e81ca61.html","posts/faa6fc84.html"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };var friend_link_list=[{"name":"煙花巷陌","link":"https://blog.ilue.pp.ua/","avatar":"https://picsur.ilue.pp.ua/i/1ed788da-9790-4d70-a888-d2773adc4124.webp","descr":"不思进取，顺其自然。","recommend":true},{"name":"安知鱼","link":"https://blog.anheyu.com/","avatar":"https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg","descr":"生活明朗，万物可爱","recommend":true}];
     var refreshNum = 1;
