@@ -1969,13 +1969,13 @@ svg.loading {
   margin: 4px;
 }
 .loading-wrap:after {
-  content: '正在加载';
+  content: 'Loading';
   color: var(--text-p1);
   display: block;
   font-size: 14px;
 }
 .loading-wrap.error:after {
-  content: '加载失败，请稍后重试。';
+  content: 'Loading failed, please try again later.';
 }
 audio,
 video {
